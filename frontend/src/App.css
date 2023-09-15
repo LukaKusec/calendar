@@ -13,28 +13,46 @@
     --text-color: var(--turquoise);
 }
 
+button {
+    font-size: large;
+}
+
 button, input[type="submit"]{
     cursor: pointer;
 }
 
 body{
-    padding: 20px 10%;
     background-color: var(--primary-color);
     font-family: Roboto;
     color: var(--text-color);
+}
+
+#root{
+    width: min(90%, 1200px);
+    margin: 70px auto;
+    
 }
 
 h1, h3{
     color: var(--secondary-color);
 }
 
+.text-highlight{
+    color: var(--turquoise);
+    font-size: larger;
+}
 
 .show-days{
     margin: 5px;
-    padding: 5px 10px;
-    border-radius: 10px;
+    padding: 5px 15px;
+    border-radius: 20px;
     font-size: larger;
     background-color: lightgrey;
+}
+
+.group-events-text{
+    font-size: larger;
+    margin: 50px 0 5px 0;
 }
 
 .active-btn{
@@ -42,15 +60,14 @@ h1, h3{
 }
 
 .google-btn{
-    margin: 10px;
-    padding: 10px 15px;
-    font-size: large;
+    margin: 10px 0;
+    padding: 10px 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .event-card{
@@ -79,6 +96,12 @@ h1, h3{
     padding-left: 40px;
 }
 
+.modal-btn{
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: var(--hawaii-blue);
+    margin: 30px 5px;
+}
 
 .modal-overlay{
     position: fixed;
@@ -87,14 +110,14 @@ h1, h3{
     right: 0;
     left: 0;
     background-color: var(--dark-overlay);
+    backdrop-filter: blur(2px);
 }
 
 .modal-box{
     position: absolute;
     border-radius: 20px;
     background-color: var(--hawaii-blue-highlight);
-    max-width: 600px;
-    max-height: 600px;
+    width: min(calc(90% - 100px), 500px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -135,17 +158,9 @@ h1, h3{
     margin: 5px 0;
 }
 
-.modal-btn{
-    padding: 10px 15px;
-    border-radius: 10px;
-    background-color: var(--hawaii-blue);
-    margin: 30px 5px;
-}
-
 .create-event-btn{
     display: block;
-    margin: 15px 0;
-    font-size: large;
+    margin: 15px 0 15px auto;
     padding: 10px 20px;
     border-radius: 30px;
     background-color: var(--hawaii-blue-highlight);

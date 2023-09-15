@@ -34,7 +34,7 @@ const EventDeleteModal = (props) => {
 
     return(
         <Modal {...props}>
-            <h3>Are you sure you want to delete "{props.summary}"?</h3>
+            <h3>Are you sure you want to delete <strong className="text-highlight">{props.summary}</strong>?</h3>
             <button disabled={isDisabled} className="modal-btn" onClick={handleSubmit}>Yes</button>
             <button disabled={isDisabled} className="modal-btn" onClick={handleCancel}>No</button>
         </Modal>
